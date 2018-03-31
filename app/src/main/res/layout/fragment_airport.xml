@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AirportActivityFragment">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/symbolLabel" />
+
+    <EditText
+        android:id="@+id/edit_input"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView1"
+        android:ems="10"
+        android:hint="@string/airport_hint"
+        android:singleLine="true">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonGetInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/editText"
+        android:text="Get Weather" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edit_input"
+        android:layout_alignBottom="@+id/edit_input"
+        android:layout_toEndOf="@+id/edit_input"
+        android:ems="10"
+        android:hint="@string/statehint"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/edit_input"
+        android:text="City:"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/city"
+        android:layout_marginTop="13dp"
+        android:text="@string/statehint"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/state"
+        android:layout_marginTop="15dp"
+        android:text="Country"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/country"
+        android:layout_marginTop="16dp"
+        android:text="temperature"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/temperature"
+        android:layout_marginTop="19dp"
+        android:text="Text"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/chill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/buttonGetInfo"
+        android:layout_alignTop="@+id/city"
+        android:text="chill"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/state"
+        android:layout_alignBottom="@+id/state"
+        android:layout_toEndOf="@+id/editText"
+        android:text="direction"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/temperature"
+        android:layout_alignEnd="@+id/direction"
+        android:text="speed"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/sunrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text"
+        android:layout_alignEnd="@+id/speed"
+        android:text="sunrise"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/sunset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/text"
+        android:layout_alignEnd="@+id/sunrise"
+        android:text="sunset"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sunset"
+        android:layout_marginTop="17dp"
+        android:text="Date"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/sunset"
+        android:src="@drawable/yahoo" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/EQRecyclerView"
+        android:layout_width="365dp"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView"></android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>
